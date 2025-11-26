@@ -1,0 +1,500 @@
+:root {
+  --bg: #050509;
+  --bg-alt: #0c0c11;
+  --gold: #d9b25f;
+  --gold-soft: #f4d38a;
+  --text: #f7f7f7;
+  --muted: #b0b0b0;
+  --radius: 14px;
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
+  --max-width: 1100px;
+  --transition: 0.25s ease-out;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Roboto", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1a1306 0, #050509 45%, #000 100%);
+  color: var(--text);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.hero-inner {
+  max-width: 780px;
+}
+
+.hero-tag {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: var(--gold-soft);
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 5vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: 0.08em;
+  margin: 0 0 1rem;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero-subtitle {
+  margin: 0 auto 1.8rem;
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  border-radius: 999px;
+  border: 1px solid rgba(244, 211, 138, 0.45);
+  padding: 0.35rem 0.9rem;
+  font-size: 0.75rem;
+  color: var(--gold-soft);
+  background: rgba(5, 5, 9, 0.7);
+}
+
+.hero-phone {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--gold-soft);
+}
+
+/* BOTONES */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition),
+    background var(--transition), opacity var(--transition), color var(--transition),
+    border-color var(--transition);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #f5d48e, #d1a552);
+  color: #1a1306;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.95);
+}
+
+.btn-secondary {
+  background: #222;
+  color: #f7f7f7;
+  border: 1px solid rgba(244, 211, 138, 0.5);
+}
+
+.btn-secondary:hover {
+  background: #333;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #25d366;
+  border: 1px solid #25d366;
+}
+
+.btn-outline:hover {
+  background: #25d366;
+  color: #050509;
+}
+
+.btn-full {
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
+/* LAYOUT SECCIONES */
+
+main {
+  background: radial-gradient(circle at top, #151018 0, #050509 55%, #000 100%);
+}
+
+.section {
+  padding: 3rem 1.5rem;
+}
+
+.section:nth-of-type(odd) {
+  background: linear-gradient(180deg, #07060a 0, #050509 100%);
+}
+
+.section:nth-of-type(even) {
+  background: radial-gradient(circle at top, #151018 0, #050509 60%, #000 100%);
+}
+
+.section h2 {
+  text-align: center;
+  margin: 0 0 0.75rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin: 0 auto 2.2rem;
+  max-width: 540px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* CARDS SERVICIOS */
+
+.cards {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.6rem;
+}
+
+.card {
+  background: radial-gradient(circle at top left, #1f1725 0, #050509 55%);
+  border-radius: var(--radius);
+  padding: 1.8rem 1.6rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.card h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.card-price {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: var(--gold-soft);
+}
+
+.card-price span {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.card-price small {
+  opacity: 0.8;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.8rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.card-list li {
+  margin-bottom: 0.45rem;
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+.card-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--gold-soft);
+}
+
+.card-tag {
+  font-size: 0.8rem;
+  color: var(--gold-soft);
+  opacity: 0.9;
+}
+
+/* CONFIANZA */
+
+.section-trust .trust-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.4rem;
+}
+
+.trust-item {
+  background: radial-gradient(circle at top left, #221728 0, #050509 70%);
+  padding: 1.3rem 1.4rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.75);
+}
+
+.trust-item h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+}
+
+.trust-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* PASOS */
+
+.section-steps .steps {
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.6rem;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f5d48e, #d1a552);
+  color: #1a1306;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* FORMULARIO */
+
+.section-form {
+  padding-bottom: 3.5rem;
+}
+
+.booking-form {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: radial-gradient(circle at top left, #221728 0, #050509 65%);
+  border-radius: var(--radius);
+  padding: 1.8rem 1.6rem 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.1rem 1.3rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group-full {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-soft);
+}
+
+input,
+select,
+textarea {
+  background: #050509;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.55rem 0.9rem;
+  color: var(--text);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border var(--transition), box-shadow var(--transition),
+    background var(--transition);
+  font-family: inherit;
+}
+
+textarea {
+  border-radius: 14px;
+  resize: vertical;
+  min-height: 80px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #777;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--gold-soft);
+  box-shadow: 0 0 0 1px rgba(244, 211, 138, 0.5);
+  background: #07040b;
+}
+
+.small-text {
+  margin-top: 0.65rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* BLOQUE MANUAL WHATSAPP */
+
+.manual-box {
+  margin-top: 1.8rem;
+  padding: 1.2rem 1.3rem 1.4rem;
+  border-radius: 16px;
+  background: radial-gradient(circle at top left, #2b1820 0, #050509 70%);
+  border: 1px solid rgba(244, 211, 138, 0.3);
+}
+
+.manual-box h3 {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-soft);
+}
+
+.manual-text {
+  margin: 0 0 0.6rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+#mensaje-whatsapp {
+  width: 100%;
+  margin-top: 0.2rem;
+  border-radius: 10px;
+  min-height: 120px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* FAQ */
+
+.section-faq .faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.section-faq details {
+  background: radial-gradient(circle at top left, #221728 0, #050509 70%);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-faq summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.9rem;
+  color: var(--gold-soft);
+}
+
+.section-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.section-faq details[open] summary {
+  margin-bottom: 0.4rem;
+}
+
+.section-faq p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 1.4rem 1.5rem 2.2rem;
+  text-align: center;
+  background: #000;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.footer p {
+  margin: 0.1rem 0;
+}
+
+/* ERRORES / TOASTS */
+
+.campo-error {
+  border-color: #ff4d4d !important;
+  box-shadow: 0 0 0 1px rgba(255, 77, 77, 0.4) !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 2.5rem;
+  }
+
+  .booking-form {
+    padding: 1.4rem 1.3rem 1.8rem;
+  }
+
+  .hero-badges {
+    flex-direction: column;
+  }
+}
