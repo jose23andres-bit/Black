@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Black VIP Limousines Madrid</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ============================
+   TODO EL CSS AQUÍ
+   ============================ */
+
+:root {
+  --bg: #050509;
+  --bg-alt: #0c0c11;
+  --gold: #d9b25f;
+  --gold-soft: #f4d38a;
+  --text: #f7f7f7;
+  --muted: #b0b0b0;
+  --radius: 14px;
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
+  --max-width: 1100px;
+  --transition: 0.25s ease-out;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Roboto", sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1a1306 0, #050509 45%, #000 100%);
+  color: var(--text);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.hero-inner {
+  max-width: 780px;
+}
+
+.hero-tag {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: var(--gold-soft);
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 5vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: 0.08em;
+  margin: 0 0 1rem;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero-subtitle {
+  margin: 0 auto 1.8rem;
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.hero-phone {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--gold-soft);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #f5d48e, #d1a552);
+  color: #1a1306;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.95);
+}
+
+/* CARDS */
+
+.cards {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 1.6rem;
+}
+
+.card {
+  background: radial-gradient(circle at top left,#1f1725 0,#050509 55%);
+  border-radius: var(--radius);
+  padding: 1.8rem 1.6rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.card h3 { margin:0 0 .6rem; }
+
+/* FORMULARIO */
+
+.booking-form{
+  max-width: var(--max-width);
+  margin:0 auto;
+  background: radial-gradient(circle at top left,#221728 0,#050509 65%);
+  border-radius: var(--radius);
+  padding:1.8rem;
+}
+
+input,select,textarea {
+  width:100%;
+  background:#050509;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,0.12);
+  color:white;
+  padding:.55rem .9rem;
+}
+
+textarea {
+  border-radius:14px;
+}
+
+/* MANUAL BOX */
+.manual-box {
+  margin-top:1.8rem;
+  padding:1.2rem;
+  background: radial-gradient(circle at top left,#2b1820 0,#050509 70%);
+  border:1px solid rgba(244,211,138,0.3);
+  border-radius:16px;
+}
+
+#mensaje-whatsapp {
+  width:100%;
+  min-height:120px;
+  border-radius:10px;
+  margin-top:.8rem;
+}
+
+.footer {
+  padding:1.4rem;
+  text-align:center;
+  background:#000;
+  color:#777;
+  font-size:.8rem;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ======================= -->
+<!--        HERO             -->
+<!-- ======================= -->
+<header class="hero">
+  <div class="hero-inner">
+    <p class="hero-tag">MADRID · SERVICIO OFICIAL · RESERVAS 24/7</p>
+    <h1>BLACK VIP<br><span>LIMOUSINES</span></h1>
+    <p class="hero-subtitle">
+      Tu limusina reservada en menos de 1 minuto.
+    </p>
+    <a href="#reserva" class="btn btn-primary">Reservar ahora</a>
+    <p class="hero-phone">Contacto directo WhatsApp: <strong>+34 722 705 922</strong></p>
+  </div>
+</header>
+
+<!-- ======================= -->
+<!--     FORMULARIO          -->
+<!-- ======================= -->
+<section id="reserva" class="section section-form">
+  <div class="booking-form">
+    <h2>Reserva tu limusina</h2>
+
+    <form id="form-reserva">
+      <label>Nombre</label>
+      <input id="nombre" required>
+
+      <label>Teléfono</label>
+      <input id="telefono" required>
+
+      <label>Fecha</label>
+      <input type="date" id="fecha" required>
+
+      <label>Hora</label>
+      <input type="time" id="hora" required>
+
+      <label>Servicio</label>
+      <select id="servicio" required>
+        <option value="">Seleccionar…</option>
+        <option value="Hummer Negra · 12 plazas (290€)">Hummer Negra · 12 plazas (290€)</option>
+        <option value="Limobus hasta 14 personas (300€)">Limobus hasta 14 personas (300€)</option>
+      </select>
+
+      <label>Personas</label>
+      <input type="number" id="personas" required>
+
+      <label>Recogida</label>
+      <input id="recogida" required>
+
+      <label>Destino</label>
+      <input id="destino" required>
+
+      <label>Detalles</label>
+      <textarea id="detalles"></textarea>
+
+      <button class="btn btn-primary" type="submit" style="margin-top:1rem;">Reservar por WhatsApp</button>
+    </form>
+
+    <!-- Manual -->
+    <div class="manual-box">
+      <h3>Si no se abre WhatsApp automático:</h3>
+      <p>1) Copia el mensaje<br>2) Pulsa el botón para abrir mi WhatsApp</p>
+
+      <textarea id="mensaje-whatsapp" readonly></textarea>
+
+      <a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=34722705922" target="_blank" style="margin-top:1rem;">
+        Abrir WhatsApp directo
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  Black VIP Limousines · Madrid
+</footer>
+
+<!-- ======================= -->
+<!--          JS             -->
+<!-- ======================= -->
+<script>
+const WHATSAPP_NUMBER="34722705922";
+
+document.getElementById("form-reserva").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let nombre=document.getElementById("nombre").value.trim();
+  let tel=document.getElementById("telefono").value.trim();
+  let fecha=document.getElementById("fecha").value;
+  let hora=document.getElementById("hora").value;
+  let servicio=document.getElementById("servicio").value;
+  let personas=document.getElementById("personas").value;
+  let recogida=document.getElementById("recogida").value.trim();
+  let destino=document.getElementById("destino").value.trim();
+  let detalles=document.getElementById("detalles").value.trim();
+
+  let msg =
+"RESERVA LIMUSINA\n\n" +
+"Nombre: "+nombre+"\n" +
+"Teléfono: "+tel+"\n" +
+"Fecha: "+fecha+"\n" +
+"Hora: "+hora+"\n" +
+"Servicio: "+servicio+"\n" +
+"Personas: "+personas+"\n" +
+"Recogida: "+recogida+"\n" +
+"Destino: "+destino+"\n" +
+"Detalles: "+detalles+"\n\n";
+
+  document.getElementById("mensaje-whatsapp").value = msg;
+
+  let url = "https://api.whatsapp.com/send?phone="+WHATSAPP_NUMBER+"&text="+encodeURIComponent(msg);
+
+  window.location.href = url;
+});
+</script>
+
+</body>
+</html>
